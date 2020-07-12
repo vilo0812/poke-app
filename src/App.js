@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+// import Contador from './components/Contador'
+// import Jsx from './components/Jsx'
+// import Lista from './components/Lista'
+// import Formulario from './components/Formulario'
+// import FormHook from './components/FormHook';
+// import Ejemplo2 from './components/Ejemplo2';
+// import Ejemplo3 from './components/Ejemplo3';
+// start comentar
+// import Comentar from './components/Comentar';
+	// const subject = {
+	// name: 'Juanito',
+	// urlImage: 'https://via.placeholder.com/64',
+	// text: 'buenos dias a todos, los amo!'
+	// }
+     //  {/*<Comentar subject={subject}/>*/}
+// end comentar
+// start CRUD
+// import Crud from './components/CRUD'
+		// <Crud/>
+// enb CRUD
+// start componente con rutas y consumidor de apis
+// import Routes from './components/Routes'
+    // <Routes/>
+import Redux from './components/Redux'
+// end componente con rutas y consumidor de apis
 function App() {
+	
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    	<Redux/>
     </div>
   );
 }
