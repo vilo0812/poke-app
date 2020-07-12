@@ -22,13 +22,13 @@ import React from 'react';
 // start componente con rutas y consumidor de apis
 // import Routes from './components/Routes'
     // <Routes/>
-import Redux from './components/Redux'
+import PokePractica from './components/PokePractica'
 // end componente con rutas y consumidor de apis
 function App() {
 	
   return (
     <div>
-    	<Redux/>
+    	<PokePractica/>
     </div>
   );
 }
