@@ -22,13 +22,14 @@ import React from 'react';
 // start componente con rutas y consumidor de apis
 // import Routes from './components/Routes'
     // <Routes/>
-import PokePractica from './components/PokePractica'
+// import PokePractica from './components/PokePractica'
+import Firebase from './components/Firebase'
 // end componente con rutas y consumidor de apis
 function App() {
 	
   return (
     <div>
-    	<PokePractica/>
+    	<Firebase/>
     </div>
   );
 }
