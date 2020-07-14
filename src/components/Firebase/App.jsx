@@ -2,6 +2,7 @@ import React from 'react';
 
 import PokeList from './components/Views/PokeList';
 import Login from './components/Login';
+import LoginUp from './components/Login/LoginUp';
 import Navbar from './components/Navbar';
 import {
   BrowserRouter as Router,
@@ -50,6 +51,7 @@ function App() {
           <RutaProtegida component={PokeList} path="/" exact/>
           {/* <Route component={Pokemones} path="/" exact/> */}
           <Route component={Login} path="/login" exact/>
+          <Route component={LoginUp} path="/loginup" exact/>
         </Switch>
       </div>
     </Router>

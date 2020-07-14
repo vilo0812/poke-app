@@ -34,13 +34,22 @@ const Navbar = (props) => {
                                 </button>
                             </>
                         ) : (
+                        <div>
                             <NavLink 
                                 className="btn btn-success mr-2" 
                                 to="/login"
                                 exact
                             >
-                                Login
+                                Iniciar Sesión
                             </NavLink>
+                            <NavLink 
+                                className="btn btn-success mr-2" 
+                                to="/loginup"
+                                exact
+                            >
+                                Registrarse
+                            </NavLink>
+                        </div>
                         )
                     }
                 </div>

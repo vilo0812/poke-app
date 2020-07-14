@@ -107,28 +107,31 @@ export const iniciarSesionAccion = (payload) => async(dispatch) => {
       console.log(errorMessage);
     });
 }
-// export const iniciarSesionAccion =  (dispatch) => {
-//     console.log("hola");
-    // const data = await firebase.auth().signInWithEmailAndPassword(payload.email,payload.contrasena)
-    // .catch((error) => {
-    //   var errorCode = error.code;
-    //   var errorMessage = error.message;
-    //   console.log(errorCode);
-    //   console.log(errorMessage);
-    // });
-    // dispatch({
-    //     type: USER_EXITO,
-    //     payload: {
-    //         user: {
-    //             uid: data.user.uid,
-    //             email: data.user.email
-    //         }
-    //     }
-    // })
-    // localStorage.setItem('pokeUser', JSON.stringify({
-    //     uid: data.user.uid,
-    //     email: data.user.email
-    // }))
-// }
 //end iniciar sesion
+//start registrar poke usuario
+export const registrarUsuarioAccion = (payload) => async(dispatch) => {
+    firebase.auth().createUserWithEmailAndPassword(payload.email,payload.contrasena)
+    .then((res) => {    
+    dispatch({
+        type: USER_EXITO,
+        payload: {
+            user: {
+                uid: res.user.uid,
+                email: res.user.email
+            }
+        }
+    })
+    localStorage.setItem('pokeUser', JSON.stringify({
+        uid: res.user.uid,
+        email: res.user.email
+    }))
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorCode);
+      console.log(errorMessage);
+    });
+}
+//end registrar poke usuario
 // end ACCIONES
