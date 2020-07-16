@@ -26,6 +26,13 @@ const Navbar = (props) => {
                                 >
                                     lista de pokemones
                                 </NavLink>
+                                <NavLink 
+                                    className="btn btn-success mr-2" 
+                                    to="/perfil"
+                                    exact
+                                >
+                                    perfil
+                                </NavLink>
                                 <button
                                     className="btn btn-success"
                                     onClick={() => cerrar()}
@@ -34,7 +41,7 @@ const Navbar = (props) => {
                                 </button>
                             </>
                         ) : (
-                        <div>
+                        <>
                             <NavLink 
                                 className="btn btn-success mr-2" 
                                 to="/login"
@@ -49,7 +56,7 @@ const Navbar = (props) => {
                             >
                                 Registrarse
                             </NavLink>
-                        </div>
+                        </>
                         )
                     }
                 </div>

@@ -1,7 +1,7 @@
 import React,{useEffect,useState, Fragment} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import {accederAccion,iniciarSesionAccion} from './../../ducks/loginDuck'
-import Modal from './../Modal'
+import {accederAccion,iniciarSesionAccion} from './../../../ducks/loginDuck'
+import Modal from './../../Modal'
 
 import { withRouter } from 'react-router-dom';
 const Login = (props) => {
@@ -16,20 +16,12 @@ const Login = (props) => {
         }
     }, [activo,history])
     // start  iniciar sesion
-    const [payload,setPayload] = useState({
-    	email:'gabriel',
-    	contrasena:'1234'
-    });
+    const [payload,setPayload] = useState({});
     const handleChange = event => {
      if(event.target.name === 'email'){
      	setPayload({
      		...payload,
      		email:event.target.value
-     	})
-     }else{
-		setPayload({
-     		...payload,
-     		contrasena:event.target.value
      	})
      }
   	}
@@ -50,13 +42,6 @@ const Login = (props) => {
 			 type="email" 
 			 placeholder="ingresa email"
     		onChange={(e) =>handleChange(e)}/>
-    		<div className="mt-2"></div>
-			<input 
-			name="contrasena"  
-			className="form-control" 
-			type="password" 
-			placeholder="ingresa contraseña"
-			onChange={(e) =>handleChange(e)}/>
     		<button type="button" className="btn btn-primary" 
     		onClick={() =>{
     		dispatch(accederAccion())

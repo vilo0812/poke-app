@@ -1,7 +1,7 @@
 import React,{useEffect,useState, Fragment} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import {accederAccion,registrarUsuarioAccion} from './../../ducks/loginDuck'
-import Modal from './../Modal'
+import {accederAccion,registrarUsuarioAccion} from './../../../ducks/loginDuck'
+import Modal from './../../Modal'
 
 import { withRouter } from 'react-router-dom';
 const Login = (props) => {
@@ -17,8 +17,10 @@ const Login = (props) => {
     }, [activo,history])
     // start  iniciar sesion
     const [payload,setPayload] = useState({
-    	email:'gabriel',
-    	contrasena:'1234'
+    	email:'',
+    	photoURL:'',
+        displayName:''
+
     });
     const handleChange = event => {
      if(event.target.name === 'email'){
@@ -26,11 +28,16 @@ const Login = (props) => {
      		...payload,
      		email:event.target.value
      	})
-     }else{
+     }else if(event.target.name === 'displayName'){
 		setPayload({
      		...payload,
-     		contrasena:event.target.value
+     		displayName:event.target.value
      	})
+     }else{
+        setPayload({
+            ...payload,
+            photoURL:event.target.value
+        })
      }
   	}
     // end  iniciar sesion
@@ -51,12 +58,18 @@ const Login = (props) => {
 			 placeholder="ingresa email"
     		onChange={(e) =>handleChange(e)}/>
     		<div className="mt-2"></div>
-			<input 
-			name="contrasena"  
-			className="form-control" 
-			type="password" 
-			placeholder="ingresa contraseña"
-			onChange={(e) =>handleChange(e)}/>
+            <input 
+            name="displayName"  
+            className="form-control" 
+            type="text" 
+            placeholder="ingrese un nombre de usuario"
+            onChange={(e) =>handleChange(e)}/>
+            <input 
+            name="photoURL"  
+            className="form-control" 
+            type="text" 
+            placeholder="ingresa url de una foto"
+            onChange={(e) =>handleChange(e)}/>
     		<button type="button" className="btn btn-primary" 
     		onClick={() =>{
             dispatch(accederAccion())   
