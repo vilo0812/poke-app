@@ -32,7 +32,7 @@ const Form= ({currentUser,updateUser,addUser,editing}) =>{
 		      <label>Name</label>
 		      <input type="text" name="name" ref={
 		      	register({
-		      		required: {value:true, message:'campo obligatorio'},
+		      		required: {value:true, message:'correo obligatorio'},
 		      	})
 		      }/>
 		      <div>
@@ -41,7 +41,7 @@ const Form= ({currentUser,updateUser,addUser,editing}) =>{
 		      <label>Username</label>
 		      <input type="text" name="username" ref={
 		      	register({
-		      		required: {value:true, message:'campo obligatorio'},
+		      		required: {value:true, message:'clave obligatoria'},
 		      	})
 		      }/>
 		      <div>

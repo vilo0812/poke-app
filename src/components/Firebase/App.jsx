@@ -16,7 +16,7 @@ import {db} from './helpers/firebaseData'
 function App() {
   const [firebaseUser, setFirebaseUser] = React.useState(false)
   const [loading, setLoading] = React.useState(true)
-  React.useEffect(() => {
+  React.useEffect(() => wr{
     const fetchUser = async () => {
       setLoading(true)
       if(await localStorage.getItem('pokeUser')){
@@ -69,11 +69,7 @@ function App() {
   return (
 <Fragment>
   { loading === true ? (
-    <div className="d-flex justify-content-center my-2">
-      <div className="mt-5 spinner-border text-info" role="status">
-            <span className="sr-only text-center">Loading...</span>
-      </div>
-    </div>
+    
     ) : (
       <Router>
         <div className="container mt-3">

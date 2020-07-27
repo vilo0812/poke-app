@@ -2,11 +2,11 @@ import React, {Fragment} from 'react'
 import './styles.css'
 import PropTypes from 'prop-types'
 // import Details from './../pokemones/Details'
-const Modal = ({appear,change,children}) => {
+const Modal = ({change,children}) => {
 	return (
 		<Fragment>
 			
-		  <div className={appear ? 'appear' : 'none'}>
+		  <div className='modal'>
 			  <div className="modal-content">
 			    <span onClick={change} className="close">
 			    &times;

@@ -49,6 +49,7 @@ const Login = (props) => {
     //end modal
     return (
     	<Fragment>
+    {modal &&
     	<Modal change={change} appear={modal}>
     		<p className="text-center display-4">Registrar Usuario</p>
     		<input 
@@ -76,6 +77,7 @@ const Login = (props) => {
 			dispatch(registrarUsuarioAccion(payload))
     		}}>Registrarse</button>
     	</Modal>
+    }
         <div className="mt-5 text-center">
             <h3>Registrarse</h3>
             <hr/>

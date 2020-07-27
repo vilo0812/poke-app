@@ -25,9 +25,11 @@ const PokeList = () =>{
   return (
     <div className="row">
     <div className="col-md-6">
-        <Modal change={change} appear={modal}> 
+    {modal &&
+        <Modal change={change}> 
             <Details></Details>
         </Modal>
+    }
         <h3>Lista de Pokemons</h3>
 
         <div className="d-flex justify-content-between">

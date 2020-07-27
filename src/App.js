@@ -24,6 +24,7 @@ import React from 'react';
     // <Routes/>
 // import PokePractica from './components/PokePractica'
 import Firebase from './components/Firebase'
+// import FirebaseAuthStorage from './components/FirebaseAuthStorage'
 // end componente con rutas y consumidor de apis
 function App() {
 	

@@ -34,7 +34,8 @@ const Login = (props) => {
     //end modal
     return (
     	<Fragment>
-    	<Modal change={change} appear={modal}>
+    {modal &&
+    	<Modal change={change}>
     		<p className="text-center display-4">Inicie su Sesión</p>
     		<input 
     		 name="email" 
@@ -48,6 +49,7 @@ const Login = (props) => {
 			dispatch(iniciarSesionAccion(payload))
     		}}>Iniciar Sesión</button>
     	</Modal>
+    }
         <div className="mt-5 text-center">
             <h3>Iniciar Sesión</h3>
             <hr/>
